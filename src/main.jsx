@@ -9,6 +9,7 @@ import Home from './components/Home/Home.jsx';
 import BrowseBooks from './components/BrowseBooks/BrowseBooks.jsx';
 import AddBook from './components/AddBooks/AddBook.jsx';
 import NotFound from './components/Not_found/NotFound.jsx';
+import Details from './components/Details/Details.jsx';
 
 
 // create the routeer with routes;
@@ -18,8 +19,9 @@ const router = createBrowserRouter([
     element:<App/>,
     children:[
       {index:true,element:<Home/>},
-      {path:"browser",element:<BrowseBooks/>},
-      {path:"add-book",element:<AddBook/>}
+      {path:"/browser",element:<BrowseBooks/>},
+      {path:"/add-book",element:<AddBook/>},
+      {path:"/book/:id",element:<Details/>}
     ]
   },
   {
