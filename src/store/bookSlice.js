@@ -3,7 +3,9 @@ import { booksData } from "../utils/books.data.js";
 
 const bookSlice = createSlice({
     name:"books",
-    initialState:booksData,
+    initialState:{
+        booksList:booksData
+    },
     reducers:{
         addBook:(state,action)=>{
               state.push(action.payload);
