@@ -28,14 +28,10 @@
 }
 
 /* Active link style */
-.nav-link.active {
-  background-color: #73a9ff;
-  color: white;
-  font-weight: bold;
-}
+
 
 /* Hover effect */
 .nav-link:hover {
-  background-color: #9ca3af;
+  background-color: #3b82f6;
   color: white;
 }

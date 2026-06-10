@@ -1,18 +1,18 @@
 /* src/components/Home/Home.css */
 
-/* Hero Section */
+/* Hero Section - light blue gradient (centered, that's fine) */
 .hero {
   text-align: center;
   padding: 3rem 2rem;
-  background:linear-gradient(135deg, #bae6fd, #7dd3fc);
-  color: white;
+  background: linear-gradient(135deg, #bfdbfe, #93c5fd);
+  color: #1e3a8a;
   border-radius: 0 0 1rem 1rem;
   margin-bottom: 2rem;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
@@ -20,27 +20,63 @@
   opacity: 0.9;
 }
 
-/* Section Title */
+/* Main container – ensures everything inside is left-aligned */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: left; /* force all text to left */
+}
+
+/* Section Titles – left aligned */
 .section-title {
   font-size: 1.8rem;
   font-weight: bold;
-  margin: 2rem 1rem 1rem 1rem;
+  margin: 2rem 0 1rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 3px solid #3b82f6;
   display: inline-block;
 }
 
-/* Books Grid */
+/* Categories container – left aligned flex wrap */
+.categories-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start; /* ensure items start from left */
+  margin: 1rem 0 2rem 0;
+}
+
+/* Individual category link */
+.category-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f3f4f6;
+  border-radius: 2rem;
+  text-decoration: none;
+  color: #1f2937;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.category-link:hover {
+  background-color: #3b82f6;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Books grid – left aligned grid */
 .books-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1.5rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 1rem 0 2rem 0;
+  justify-content: start;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .hero {
     padding: 2rem 1rem;
@@ -56,7 +92,15 @@
 
   .section-title {
     font-size: 1.5rem;
-    margin-left: 1rem;
+  }
+
+  .categories-container {
+    gap: 0.75rem;
+  }
+
+  .category-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
   }
 
   .books-grid {

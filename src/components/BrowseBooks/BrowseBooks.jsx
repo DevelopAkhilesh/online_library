@@ -1,9 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 
 const BrowseBooks = () => {
   return (
     <div>
-      browser
+      hloo
     </div>
   )
 }

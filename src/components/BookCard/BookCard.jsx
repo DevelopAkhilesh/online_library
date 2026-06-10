@@ -7,7 +7,7 @@ const BookCard = ({book}) => {
   return '★'.repeat(rating) + '☆'.repeat(5 - rating)
 }
   return (
-   <Link to={`/book/${book.id}`} className="book-card">
+   <div className="book-card">
       
       <div className="book-cover" style={{ background: book.coverBg || '#eeedfb' }}>
         {book.cover || '📖'}
@@ -17,8 +17,8 @@ const BookCard = ({book}) => {
       <p className="author">{book.author}</p>
       <span className="category-tag">{book.category}</span>
       <div className="stars">{renderStars(book.rating)}</div>
-      <div className="view-link">View details →</div>
-    </Link>
+      <Link to={`/book/${book.id}`} ><div className="view-link">View details →</div></Link>
+    </div>
   )
 }
 
