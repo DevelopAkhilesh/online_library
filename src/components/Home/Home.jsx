@@ -23,8 +23,8 @@ const Home = () => {
         <p>Discover, explore, and manage your favourite books all in one place.</p>
       </div>
       <div  className="section-title">Browse by category</div>
-      <div className="categories-container">{categories.map((cat)=>(
-        <Link to={`/category/${cat.label}`} className='category-link'>{cat.label} {cat.emoji}</Link>
+      <div className="categories-container">{categories.map((cat,id)=>(
+        <Link key={id} to={`/category/${cat.label}`} className='category-link'>{cat.label} {cat.emoji}</Link>
       ))}</div>
 
       <div className="section-title">Popular books</div>
