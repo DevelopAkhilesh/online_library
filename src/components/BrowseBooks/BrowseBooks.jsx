@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useParams, useNavigate } from 'react-router-dom'
 import BookCard from '../BookCard/BookCard'
+import './BrowseBooks.css';
 
 const categories = ['All', 'Fiction', 'Non-Fiction', 'Sci-Fi', 'Fantasy']
 

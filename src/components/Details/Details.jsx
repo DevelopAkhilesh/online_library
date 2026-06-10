@@ -2,7 +2,10 @@ import React from 'react'
 
 const Details = () => {
   return (
-    <div>
+    <div className="page-wrapper">
+      <button className="back-btn" onClick={() => navigate('/browse')}>
+        ← Back to browse
+      </button>
       
     </div>
   )
