@@ -9,7 +9,7 @@ const Home = () => {
          { label: 'Fiction', emoji: '📖' },
           { label: 'Non-Fiction', emoji: '📖' },
            { label: 'Sci-Fi', emoji: '📖' },
-            { label: 'Fantacy', emoji: '📖' },
+            { label: 'Fantasy', emoji: '📖' },
     ]
 
     const books = useSelector((state)=>state.books.booksList);
