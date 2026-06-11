@@ -1,3 +1,4 @@
+/* Existing CSS remains as is */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -5,6 +6,7 @@
   padding: 1rem 2rem;
   background-color: #f3f4f6;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* allows wrapping on small screens */
 }
 
 .navbar-brand {
@@ -16,6 +18,7 @@
 .navbar-links {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap; /* links wrap to next line if needed */
 }
 
 .nav-link {
@@ -27,11 +30,48 @@
   transition: all 0.2s ease;
 }
 
-/* Active link style */
-
-
-/* Hover effect */
 .nav-link:hover {
   background-color: #3b82f6;
   color: white;
+}
+
+/* ---------- Responsive for Tablet (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1.5rem;
+  }
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  .navbar-links {
+    gap: 0.75rem;
+  }
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ---------- Responsive for Mobile (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;      /* stack brand and links vertically */
+    align-items: stretch;        /* full width items */
+    padding: 0.75rem 1rem;
+    gap: 0.75rem;
+  }
+  .navbar-brand {
+    text-align: center;          /* center brand on mobile */
+    font-size: 1.2rem;
+  }
+  .navbar-links {
+    justify-content: center;     /* center the links */
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .nav-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    text-align: center;
+  }
 }
