@@ -1,17 +1,76 @@
-# React + Vite
+# Book Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite library app for browsing, searching, and adding books.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home page with category links and popular books.
+- Browse page with category filtering and search by title or author.
+- Add Book page with form validation and Redux-powered state.
+- Detailed book page for individual books.
+- Client-side routing with React Router.
+- State management with Redux Toolkit.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- React Router DOM
+- Redux Toolkit
+- JavaScript
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# online_library
+- `src/main.jsx` - app entry, router setup, Redux provider
+- `src/App.jsx` - root layout and outlet container
+- `src/components/Navbar/Navbar.jsx` - navigation bar
+- `src/components/Home/Home.jsx` - home page with categories and popular books
+- `src/components/BrowseBooks/BrowseBooks.jsx` - browse page with filters and search
+- `src/components/AddBooks/AddBook.jsx` - add book form with validation
+- `src/components/Details/Details.jsx` - book detail view
+- `src/store/bookSlice.js` - Redux slice for book list state
+- `src/store/store.js` - Redux store configuration
+- `src/utils/books.data.js` - initial sample book data
+
+## Available Scripts
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+## Routes
+
+- `/` - Home page
+- `/browser` - Browse all books
+- `/category/:label` - Browse books by category
+- `/add-book` - Add a new book
+- `/book/:id` - Book details
+
+## Notes
+
+- New books are stored in Redux state during the current session.
+- Categories include `Fiction`, `Non-Fiction`, `Sci-Fi`, and `Fantasy`.
+- The app uses a sample book list seeded from `src/utils/books.data.js`.
+
+
+Github link - https://github.com/DevelopAkhilesh/online_library.git
